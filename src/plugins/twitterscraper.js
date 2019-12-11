@@ -194,12 +194,12 @@ const plugin = async (envelope, { stats, log, cfg }) => {
 
       try {
         data = await retry(twitterScraperByInterval(cmd, user, since, until));
-        logCounter();
       } catch (e) {
         log.warn(
           `${user}: Failure to scrape interval: ${e.message} (${formatDate(since)} till ${formatDate(until)}). Ignoring.`
         );
       }
+      logCounter();
 
       return data;
     }, intervals);
