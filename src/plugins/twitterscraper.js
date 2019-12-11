@@ -185,7 +185,7 @@ const plugin = async (envelope, { stats, log, cfg }) => {
       .map((week) => [week, addWeeks(week, 1)]);
 
     const logCounter = counter(intervals.length, ({cnt, total, percent}) =>
-      log.debug(`Progress intervals for ${user}: ${cnt}/${total} intervals (${percent}%).`),
+      log.debug(`Progress intervals for ${user}: ${cnt}/${total} (${percent}%).`),
       {threshold: 1, steps: 10},
     );
 
@@ -210,7 +210,7 @@ const plugin = async (envelope, { stats, log, cfg }) => {
   };
 
   const queryCounter = counter(queries.length, ({cnt, total, percent}) =>
-    log.debug(`Progress: ${cnt}/${total} intervals (${percent}%).`),
+    log.debug(`Progress: ${cnt}/${total} (${percent}%).`),
     {threshold: 1, steps: 5},
   );
 
