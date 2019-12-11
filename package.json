@@ -17,7 +17,9 @@
   "dependencies": {
     "@sugarcube/plugin-fs": "^0.34.0",
     "@sugarcube/utils": "^0.34.0",
-    "csvtojson": "^2.0.10",
-    "date-fns": "^2.8.1"
+    "cheerio": "^1.0.0-rc.3",
+    "date-fns": "^2.8.1",
+    "lodash": "^4.17.15",
+    "node-fetch": "^2.6.0"
   }
 }
